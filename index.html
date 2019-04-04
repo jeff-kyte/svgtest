@@ -4,7 +4,8 @@
 	<title>SVG Design Assignment</title>
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" id="chalice" viewBox="0 0 177.1 131" width="600px" >
+<div style="resize:both;overflow:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" id="chalice" viewBox="0 0 177.1 131" >
 	<defs>
 		<style>
 			.cls-1 { fill: #8cd3be; }
@@ -48,144 +49,87 @@
 		<rect class="cls-3" x="21.6" y="35.5" width="5" height="45"/>
 	</g>
 	<!-- Snakes -->
-	<g id="leftHead" class="snake" visibility="hidden" >
-		<use href="#Tongue" y="-15" >
-			<animateTransform
-				attributeName="transform"
-				begin="chalice.click"
-				repeatCount="1"
-				type="skewY"
-				values="0;0;10;-10;0;0"
-				dur="3s"
-				additive="sum"/>
-			<animateTransform
-				attributeName="transform"
-				begin="chalice.click"
-				repeatCount="1"
-				type="translateX"
-				values="0;15;15;15;15;0"
-				dur="3s"
-				additive="sum"/>
-		</use>
-		<use href="#Head" y="-15" />
-		<use href="#Eye" y="-6" x="8"/>
-		<use href="#Eye" y="2" x="8"/>
-		<animateMotion begin="chalice.click" dur="5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');" >
-			<mpath href="#Left_Path"/>
-		</animateMotion>
-	</g>
-	<g id="leftBody1" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Left_Path"/>
-		</animateMotion>
-	</g>
-	<g id="leftBody2" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 1500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Left_Path"/>
-		</animateMotion>
-	</g>
-	<g id="leftBody3" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 2250ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Left_Path"/>
-		</animateMotion>
-	</g>
-	<g id="leftBody4" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 3000ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Left_Path"/>
-		</animateMotion>
-	</g>
-	<g id="leftBody5" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 3750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Left_Path"/>
-		</animateMotion>
-	</g>
-	<g id="leftBody6" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 4500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Left_Path"/>
-		</animateMotion>
-	</g>
-	<g id="rightHead" class="snake" visibility="hidden" >
-		<use href="#Tongue" y="-15" >
-			<animateTransform
-				attributeName="transform"
-				begin="chalice.click"
-				repeatCount="1"
-				type="skewY"
-				values="0;0;10;-10;0;0"
-				dur="3s"
-				additive="sum"/>
-			<animateTransform
-				attributeName="transform"
-				begin="chalice.click"
-				repeatCount="1"
-				type="translateX"
-				values="0;15;15;15;15;0"
-				dur="3s"
-				additive="sum"/>
-		</use>
-		<use href="#Head" y="-15" />
-		<use href="#Eye" y="-6" x="8"/>
-		<use href="#Eye" y="2" x="8"/>
-		<animateMotion begin="chalice.click" dur="5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');" >
-			<mpath href="#Right_Path"/>
-		</animateMotion>
-	</g>
-	<g id="rightBody1" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Right_Path"/>
-		</animateMotion>
-	</g>
-	<g id="rightBody2" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 1500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Right_Path"/>
-		</animateMotion>
-	</g>
-	<g id="rightBody3" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 2250ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Right_Path"/>
-		</animateMotion>
-	</g>
-	<g id="rightBody4" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 3s" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Right_Path"/>
-		</animateMotion>
-	</g>
-	<g id="rightBody5" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 3750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Right_Path"/>
-		</animateMotion>
-	</g>
-	<g id="rightBody6" class="snake" visibility="hidden" >
-		<use href="#Pill" y="-15" />
-		<animateMotion begin="chalice.click + 4500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-			onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-			<mpath href="#Right_Path"/>
-		</animateMotion>
-	</g>
+	<g id="entireLeftSnake">
+        <g id="leftHead" class="snake" visibility="hidden" >
+            <use href="#Tongue" y="-15" >
+                <!--<animateTransform
+                    attributeName="transform"
+                    begin="chalice.click"
+                    repeatCount="1"
+                    type="skewY"
+                    values="0;0;10;-10;0;0"
+                    dur="3s"
+                    additive="sum"/>
+                <animateTransform
+                    attributeName="transform"
+                    begin="chalice.click"
+                    repeatCount="1"
+                    type="translateX"
+                    values="0;15;15;15;15;0"
+                    dur="3s"
+                    additive="sum"/>-->
+                <animateTransform
+                    attributeName="transform"
+                    begin="chalice.click"
+                    repeatCount="1"
+                    type="skewX"
+                    values="50;30;70;30;0"
+                    dur="500ms"
+                    additive="sum"/>
+                
+            </use>
+            <use href="#Head" y="-15" />
+            <use href="#Eye" y="-6" x="8"/>
+            <use href="#Eye" y="2" x="8"/>
+            <animateMotion begin="chalice.click" dur="5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');" >
+                <mpath href="#Left_Path"/>
+            </animateMotion>
+        </g>
+        <g id="leftBody1" class="snake" visibility="hidden" >
+            <use href="#Pill" y="-15" />
+            <animateMotion begin="chalice.click + 750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
+                <mpath href="#Left_Path"/>
+            </animateMotion>
+        </g>
+        <g id="leftBody2" class="snake" visibility="hidden" >
+            <use href="#Pill" y="-15" />
+            <animateMotion begin="chalice.click + 1500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
+                <mpath href="#Left_Path"/>
+            </animateMotion>
+        </g>
+        <g id="leftBody3" class="snake" visibility="hidden" >
+            <use href="#Pill" y="-15" />
+            <animateMotion begin="chalice.click + 2250ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
+                <mpath href="#Left_Path"/>
+            </animateMotion>
+        </g>
+        <g id="leftBody4" class="snake" visibility="hidden" >
+            <use href="#Pill" y="-15" />
+            <animateMotion begin="chalice.click + 3000ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
+                <mpath href="#Left_Path"/>
+            </animateMotion>
+        </g>
+        <g id="leftBody5" class="snake" visibility="hidden" >
+            <use href="#Pill" y="-15" />
+            <animateMotion begin="chalice.click + 3750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
+                <mpath href="#Left_Path"/>
+            </animateMotion>
+        </g>
+        <g id="leftBody6" class="snake" visibility="hidden" >
+            <use href="#Pill" y="-15" />
+            <animateMotion begin="chalice.click + 4500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
+                <mpath href="#Left_Path"/>
+            </animateMotion>
+        </g>
+    </g>
+    <use href="#entireLeftSnake" transform="scale(-1,1) translate(-180)" />
 	
 	<!-- Foreground -->
 	<g id="Foreground_Bars" data-name="Foreground Bars">
@@ -211,7 +155,7 @@
 	<animate href="#bg6" attributeName="fill" begin="chalice.mouseenter" values="#81c5cc;#80a6cb;#81c5cc" dur="1s" repeatCount="indefinite" end="chalice.mouseleave" />
 	
 </svg>
-
+</div>
 </body>
 </html>
 
