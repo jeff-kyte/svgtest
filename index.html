@@ -25,11 +25,21 @@
 				fill: #754c24;
 				stroke: #754c24;
 			  }
+            .slither {
+                stroke-dasharray:220;
+                stroke-dashoffset:220;
+                animation: dash 6s linear forwards;
+                stroke: #7ac943;
+                stroke-width: 25px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            @keyframes dash {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
 		</style>
-		<g id="Snake_Paths" data-name="Snake Paths">
-			<path id="Left_Path" data-name="Left Path" class="cls-4" d="M6.5,130.5c-.56-4.25-.79-11.09,3-17,9.35-14.59,34-10,37-28,2-20-42-30-41-45,0-20,22-32,35-32" transform="translate(0.6 0.5)"/>
-			<path id="Right_Path" data-name="Right Path" class="cls-4" d="M168.55,130.5c.56-4.25.79-11.09-3-17-9.35-14.59-34-10-37-28-2-20,42-30,41-45,0-20-22-32-35-32" transform="translate(0.6 0.5)"/>
-		</g>
 		<path id="Tongue" class="tongue" d="M.5,14.43a32.42,32.42,0,0,0,10.83.74,46.15,46.15,0,0,1,7.17-.67l-4.67,1.41,6.67.59s-8.33.15-10,.89c0,0-5.83.74-10-.74" transform="translate(0.82 0.5)"/>
 		<rect id="Pill" class="cls-5" x="0.5" y="2" width="26.57" height="26.57" rx="9.39"/>
 		<!-- Old Pill: <rect id="Pill" class="cls-5" x="1.03" y="0.5" width="18.77" height="29.5" rx="9.39"/> -->
@@ -48,26 +58,14 @@
 		<rect class="cls-3" x="149.6" y="35.5" width="5" height="45"/>
 		<rect class="cls-3" x="21.6" y="35.5" width="5" height="45"/>
 	</g>
+	<g id="Snake_Paths" data-name="Snake Paths">
+        <path id="Left_Path" data-name="Left Path" class="cls-4" d="M6.5,130.5c-.56-4.25-.79-11.09,3-17,9.35-14.59,34-10,37-28,2-20-42-30-41-45,0-20,22-32,35-32" transform="translate(0.6 0.5)"/>
+        <path id="Right_Path" data-name="Right Path" class="cls-4" d="M168.55,130.5c.56-4.25.79-11.09-3-17-9.35-14.59-34-10-37-28-2-20,42-30,41-45,0-20-22-32-35-32" transform="translate(0.6 0.5)"/>
+    </g>
 	<!-- Snakes -->
 	<g id="entireLeftSnake">
         <g id="leftHead" class="snake" visibility="hidden" >
             <use href="#Tongue" y="-15" >
-                <!--<animateTransform
-                    attributeName="transform"
-                    begin="chalice.click"
-                    repeatCount="1"
-                    type="skewY"
-                    values="0;0;10;-10;0;0"
-                    dur="3s"
-                    additive="sum"/>
-                <animateTransform
-                    attributeName="transform"
-                    begin="chalice.click"
-                    repeatCount="1"
-                    type="translateX"
-                    values="0;15;15;15;15;0"
-                    dur="3s"
-                    additive="sum"/>-->
                 <animateTransform
                     attributeName="transform"
                     begin="chalice.click"
@@ -76,60 +74,19 @@
                     values="50;30;70;30;0"
                     dur="500ms"
                     additive="sum"/>
-                
             </use>
             <use href="#Head" y="-15" />
             <use href="#Eye" y="-6" x="8"/>
             <use href="#Eye" y="2" x="8"/>
             <animateMotion begin="chalice.click" dur="5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-                onbegin="this.parentElement.setAttribute('visibility', 'visible');" >
-                <mpath href="#Left_Path"/>
-            </animateMotion>
-        </g>
-        <g id="leftBody1" class="snake" visibility="hidden" >
-            <use href="#Pill" y="-15" />
-            <animateMotion begin="chalice.click + 750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-                <mpath href="#Left_Path"/>
-            </animateMotion>
-        </g>
-        <g id="leftBody2" class="snake" visibility="hidden" >
-            <use href="#Pill" y="-15" />
-            <animateMotion begin="chalice.click + 1500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-                <mpath href="#Left_Path"/>
-            </animateMotion>
-        </g>
-        <g id="leftBody3" class="snake" visibility="hidden" >
-            <use href="#Pill" y="-15" />
-            <animateMotion begin="chalice.click + 2250ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-                <mpath href="#Left_Path"/>
-            </animateMotion>
-        </g>
-        <g id="leftBody4" class="snake" visibility="hidden" >
-            <use href="#Pill" y="-15" />
-            <animateMotion begin="chalice.click + 3000ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-                <mpath href="#Left_Path"/>
-            </animateMotion>
-        </g>
-        <g id="leftBody5" class="snake" visibility="hidden" >
-            <use href="#Pill" y="-15" />
-            <animateMotion begin="chalice.click + 3750ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
-                <mpath href="#Left_Path"/>
-            </animateMotion>
-        </g>
-        <g id="leftBody6" class="snake" visibility="hidden" >
-            <use href="#Pill" y="-15" />
-            <animateMotion begin="chalice.click + 4500ms" dur="5s" end="chalice.click + 5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
-                onbegin="this.parentElement.setAttribute('visibility', 'visible');">
+                onbegin="this.parentElement.setAttribute('visibility', 'visible');
+                        document.getElementById('Left_Path').classList.add('slither');
+                        document.getElementById('Right_Path').classList.add('slither');" >
                 <mpath href="#Left_Path"/>
             </animateMotion>
         </g>
     </g>
-    <use href="#entireLeftSnake" transform="scale(-1,1) translate(-180)" />
+    <use href="#entireLeftSnake" id="entireRightSnake" transform="scale(-1,1) translate(-176)" />
 	
 	<!-- Foreground -->
 	<g id="Foreground_Bars" data-name="Foreground Bars">
