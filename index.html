@@ -4,8 +4,7 @@
 	<title>SVG Design Assignment</title>
 </head>
 <body>
-<div style="resize:both;overflow:auto;">
-<svg xmlns="http://www.w3.org/2000/svg" id="chalice" viewBox="0 0 177.1 131" >
+<svg xmlns="http://www.w3.org/2000/svg" id="chalice" viewBox="0 0 177.1 131" width="200px">
 	<defs>
 		<style>
 			.cls-1 { fill: #8cd3be; }
@@ -26,9 +25,9 @@
 				stroke: #754c24;
 			  }
             .slither {
-                stroke-dasharray:170;
-                stroke-dashoffset:170;
-                animation: dash 6s linear forwards;
+                stroke-dasharray:185;
+                stroke-dashoffset:185;
+                animation: dash 4s linear forwards;
                 stroke: #7ac943;
                 stroke-width: 15px;
                 stroke-linecap: round;
@@ -69,18 +68,18 @@
         <g id="leftHead" class="snake" visibility="hidden" >
             <path id="Tongue" class="tongue" d="M.5,8.7a26.79,26.79,0,0,0,8.94.61,37.75,37.75,0,0,1,5.91-.55L11.5,9.92l5.5.49s-6.87.12-8.25.74c0,0-4.81.61-8.25-.62" transform="translate(0.5 -9)">
                 <animateTransform
-                        attributeName="transform"
-                        begin="chalice.click"
-                        repeatCount="1"
-                        type="skewX"
-                        values="30;15;35;10;0"
-                        dur="500ms"
-                        additive="sum"/>
+                    attributeName="transform"
+                    begin="chalice.click"
+                    repeatCount="1"
+                    type="skewX"
+                    values="30;15;35;10;0"
+                    dur="500ms"
+                    additive="sum"/>
             </path>
             <path id="Head" class="cls-5" d="M15.46,13.9,7,18a4.91,4.91,0,0,1-7-4.46L.07,5.22A4.9,4.9,0,0,1,7.19.89l8.34,4.22A4.9,4.9,0,0,1,15.46,13.9Z" transform="translate(0.5 -9)"/>
             <circle id="Eye" class="cls-7" cx="9.5" cy="4" r="1"/>
             <circle id="Eye-2" data-name="Eye" class="cls-8" cx="9.5" cy="-1" r="1"/>
-            <animateMotion begin="chalice.click" dur="5s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
+            <animateMotion begin="chalice.click" dur="3s" repeatCount="1" rotate="auto" fill="freeze" restart="never"
                 onbegin="this.parentElement.setAttribute('visibility', 'visible');
                         document.getElementById('Left_Path').classList.add('slither');
                         document.getElementById('Right_Path').classList.add('slither');" >
@@ -112,9 +111,7 @@
 	<animate href="#bg2" attributeName="fill" begin="chalice.mouseenter" values="#81c5cc;#80a6cb;#81c5cc" dur="1s" repeatCount="indefinite" end="chalice.mouseleave" />
 	<animate href="#bg4" attributeName="fill" begin="chalice.mouseenter" values="#81c5cc;#80a6cb;#81c5cc" dur="1s" repeatCount="indefinite" end="chalice.mouseleave" />
 	<animate href="#bg6" attributeName="fill" begin="chalice.mouseenter" values="#81c5cc;#80a6cb;#81c5cc" dur="1s" repeatCount="indefinite" end="chalice.mouseleave" />
-	
 </svg>
-</div>
 </body>
 </html>
 
